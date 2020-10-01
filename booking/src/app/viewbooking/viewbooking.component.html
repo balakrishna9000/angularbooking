@@ -1,0 +1,30 @@
+ <p>viewbooking works!</p>
+<h3>viewbooking</h3>
+<table border="1">
+    <tr>
+        <th>bookingId</th>
+        <th>usuerId</th>
+        <th>bookingDate</th>
+        <th>ticketCost</th>
+        <th>bookingState</th>
+    </tr>
+    <tr *ngfor= "let booking of viewbookings">
+        <td>
+            {{booking.bookingId}}
+        </td>
+        <td>
+            {{booking.userId}}
+        </td>
+        <td>
+            {{booking.bookingDate}}
+        </td>
+        <td>
+            {{booking.ticketCost}}
+        </td>
+        <td>
+            {{booking.bookingState}}
+        </td>
+        <td>
+            <button (click)="removeBooking(booking.bookingId)">remove booking</button>
+        </td>
+    </table>
